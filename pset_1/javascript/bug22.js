@@ -12,8 +12,11 @@ app.get('/users/:id', async (req, res) => {
   const user = await findUser(Number(req.params.id));
   res.json(user);
 });
+<<<<<<< HEAD
 app.listen(3000,()=>{
   console.log("server running");
 })
+=======
+>>>>>>> 0c6780b830682c98483dc706af943986494c4a9b
 
 module.exports = app;

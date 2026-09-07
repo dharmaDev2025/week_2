@@ -12,7 +12,11 @@ function getUserById(id: number): Promise<User> {
   });
 }
 
+<<<<<<< HEAD
 async function loadUser(id: number): Promise<User> {
+=======
+async function loadUser(id: number): User {
+>>>>>>> 0c6780b830682c98483dc706af943986494c4a9b
   const user = await getUserById(id);
   return user;
 }
@@ -21,8 +25,11 @@ app.get('/users/:id', async (req: Request, res: Response) => {
   const user = await loadUser(Number(req.params.id));
   res.json(user);
 });
+<<<<<<< HEAD
 app.listen(3000,()=>{
   console.log("server is running");
 })
+=======
+>>>>>>> 0c6780b830682c98483dc706af943986494c4a9b
 
 export default app;

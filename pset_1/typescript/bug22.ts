@@ -13,11 +13,17 @@ function getUserById(id: number): Promise<User> {
 }
 
 app.get('/users/:id', async (req: Request, res: Response) => {
+<<<<<<< HEAD
     const user: User = await getUserById(Number(req.params.id));
   res.json({ name: user.name });
 });
 app.listen(3000,()=>{
   console.log("server running");
 })
+=======
+    const user: User = getUserById(Number(req.params.id));
+  res.json({ name: user.name });
+});
+>>>>>>> 0c6780b830682c98483dc706af943986494c4a9b
 
 export default app;
